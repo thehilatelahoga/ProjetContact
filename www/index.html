@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="lib/themes/contact.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/jquery.mobile.structure-1.4.5.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="lib/jquery.mobile-1.4.5.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+
+    <style>
+        .contact-photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page d'accueil -->
+    <div data-role="page" id="home">
+        <div data-role="header">
+            <h1>Contacts</h1>
+            <a href="#addContact" class="ui-btn ui-btn-right ui-icon-plus ui-btn-icon-notext">Ajouter</a>
+        </div>
+    
+        <div role="main" class="ui-content">
+            <!-- Attribut data-filter activé pour la recherche -->
+            <ul data-role="listview" id="contactList" data-autodividers="true" data-filter="true"></ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Thehilatel AHOGA | M1IA &copy; 2024</h1>
+        </div>
+    </div>
+
+    <!-- Page de détails du contact -->
+    <div data-role="page" id="contactDetails">
+        <div data-role="header">
+            <h1>Détails du Contact</h1>
+            <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Retour</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <form id="contactForm">
+                <label for="contactFirstName">Prénom :</label>
+                <input type="text" id="contactFirstName" disabled>
+
+                <label for="contactLastName">Nom :</label>
+                <input type="text" id="contactLastName" disabled>
+
+                <label for="contactPhone">Téléphone :</label>
+                <input type="text" id="contactPhone" disabled>
+
+                <a href="#editContact" class="ui-btn ui-btn-inline">Modifier</a>
+                <a href="#" id="deleteContact" class="ui-btn ui-btn-inline ui-btn-b">Supprimer</a>
+            </form>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Thehilatel AHOGA | M1IA &copy; 2024</h1>
+        </div>
+    </div>
+
+
+    <!-- Page d'ajout/modification de contact -->
+    <div data-role="page" id="addContact">
+        <div data-role="header">
+            <h1>Ajouter un Contact</h1>
+            <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Retour</a>
+        </div>
+    
+        <div role="main" class="ui-content">
+            <form id="addContactForm">
+                <label for="newContactFirstName">Prénom :</label>
+                <input type="text" id="newContactFirstName">
+    
+                <label for="newContactLastName">Nom :</label>
+                <input type="text" id="newContactLastName">
+    
+                <label for="newContactPhone">Téléphone :</label>
+                <input type="text" id="newContactPhone">
+    
+                <button type="submit" class="ui-btn ui-btn-b">Sauvegarder</button>
+            </form>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Thehilatel AHOGA | M1IA &copy; 2024</h1>
+        </div>
+    </div>
+    
+
+    <!-- Page de modification de contact -->
+    <div data-role="page" id="editContact">
+        <div data-role="header">
+            <h1>Modifier le Contact</h1>
+            <a href="#home" class="ui-btn ui-btn-left ui-icon-back ui-btn-icon-notext">Retour</a>
+        </div>
+    
+        <div role="main" class="ui-content">
+            <form id="editContactForm">
+                <label for="editContactFirstName">Prénom :</label>
+                <input type="text" id="editContactFirstName">
+    
+                <label for="editContactLastName">Nom :</label>
+                <input type="text" id="editContactLastName">
+    
+                <label for="editContactPhone">Téléphone :</label>
+                <input type="text" id="editContactPhone">
+    
+                <button type="submit" class="ui-btn ui-btn-b">Sauvegarder</button>
+            </form>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h1>Thehilatel AHOGA | M1IA &copy; 2024</h1>
+        </div>
+    </div>   
+
+</body>
+</html>
+
